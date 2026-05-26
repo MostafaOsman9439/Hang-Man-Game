@@ -1,0 +1,145 @@
+:root {
+  --main-color: #2c3e50;
+  --accent-color: #e74c3c;
+  --border-color: #34495e;
+  --thickness: 4px;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.game-container {
+  width: 900px;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hangman-draw {
+  width: 200px;
+  height: 250px;
+  position: relative;
+  margin: auto;
+}
+
+.gallows div,
+.man div {
+  position: absolute;
+  background-color: var(--border-color);
+  display: none;
+}
+
+.base {
+  width: 80px;
+  height: var(--thickness);
+  bottom: 0;
+  left: 0;
+  display: block !important;
+}
+.stand {
+  width: var(--thickness);
+  height: 100%;
+  bottom: 0;
+  left: 40px;
+}
+.top-bar {
+  width: 100px;
+  height: var(--thickness);
+  top: 0;
+  left: 40px;
+}
+.rope {
+  width: var(--thickness);
+  height: 40px;
+  top: 0;
+  left: 140px;
+}
+
+.head {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: var(--thickness) solid var(--border-color);
+  background: transparent !important;
+  top: 40px;
+  left: 120px;
+}
+
+.body {
+  width: var(--thickness);
+  height: 80px;
+  top: 90px;
+  left: 140px;
+}
+.left-arm {
+  width: 40px;
+  height: var(--thickness);
+  top: 110px;
+  left: 98px;
+  transform: rotate(-30deg);
+}
+.right-arm {
+  width: 40px;
+  height: var(--thickness);
+  top: 110px;
+  left: 145px;
+  transform: rotate(30deg);
+}
+.left-leg {
+  width: 40px;
+  height: var(--thickness);
+  top: 180px;
+  left: 101px;
+  transform: rotate(-45deg);
+}
+.right-leg {
+  width: 40px;
+  height: var(--thickness);
+  top: 180px;
+  left: 143px;
+  transform: rotate(45deg);
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.key {
+  padding: 10px;
+  background: #ecf0f1;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.key:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.word-display {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.letter-slot {
+  width: 40px;
+  height: 50px;
+  border-bottom: 3px solid var(--main-color);
+  font-size: 32px;
+  text-align: center;
+  font-weight: bold;
+}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HangMan V.0.2</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <header class="game-header">
+        <h1>Hangman</h1>
+        <div class="score-info">Score: <span id="game-score">0</span></div>
+        <div class="hints-info">Hints: <span id="hints-count">0/0</span></div>
+        <div class="category-info">
+          Word From: <span id="category-name">---</span>
+        </div>
+      </header>
+
+      <main class="game-body">
+        <section class="draw-section">
+          <div class="hangman-draw">
+            <div class="gallows">
+              <div class="base"></div>
+              <div class="stand"></div>
+              <div class="top-bar"></div>
+              <div class="rope"></div>
+            </div>
+            <div class="man">
+              <div class="head"></div>
+              <div class="body"></div>
+              <div class="left-arm"></div>
+              <div class="right-arm"></div>
+              <div class="left-leg"></div>
+              <div class="right-leg"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="word-section">
+          <div id="word-display" class="word-display"></div>
+        </section>
+        <div class="game-controls">
+          <button id="hint-btn" onclick="getHint()">Hint 💡</button>
+        </div>
+      </main>
+
+      <footer class="keyboard-section">
+        <div id="keyboard" class="keyboard"></div>
+      </footer>
+    </div>
+    <audio id="success-sound" src="Audio/2.ogg" preload="auto"></audio>
+    <audio id="fail-sound" src="Audio/1.ogg" preload="auto"></audio>
+    <script src="main.js"></script>
+  </body>
+</html>
